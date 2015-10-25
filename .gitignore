@@ -1,0 +1,17 @@
+# Compiled/Generated files
+*.class
+
+# OS X Files
+.DS_Store
+._*
+.Spotlight*
+.Trashes
+
+# Eclipse Files
+.classpath
+.project
+.settings/
+
+# AWS Credentials
+AwsCredentials.properties
+Credentials.java
