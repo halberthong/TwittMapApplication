@@ -1,16 +1,17 @@
-ttMap 
+TwittMap 
 -----------------
 
-This web application is for showing the current posted twitters on the Google map in near real-time. 
+This web application is for showing the current posted twitters on the Google map in near real-time, with user defined settings and category differentiated by colors
 
 ##Backend
 -----------------
-Implemented with Java Web Development based on Tomcat 8 Server
-Communication is based on Java Servlet.
+1. Implemented with Java Web Development based on Tomcat Server.
+2. Utilized MySQL database to manage Twitter data and JDBC to access from Java programs.
+3. RESTful API is provided by Java Servlet.
 
 ##Frontend
 -----------------
-Based on HTML/CSS, JavaScript and Bootstrap
+Designed and implemented based on HTML/CSS, JavaScript and Bootstrap
 
 ##Deployemnt
 -----------------
