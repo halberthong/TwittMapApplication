@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	(function() {
-//		var servletUrl = "http://cloudyyyyy-3mamuu3rzh.elasticbeanstalk.com/WebServlet"; 
-		var servletUrl = "http://localhost:8080/TwittMapApplication/WebServlet"; 
+		var servletUrl = "http://cloudyyyyy-3mamuu3rzh.elasticbeanstalk.com/WebServlet";
+		// var servletUrl = "http://localhost:8080/TwittMapApplication/WebServlet"; 
 		var minutes, keyword;
 		var websocket;
 		var oldpoints = {};
 		var newpoints = {};
 		var map;
 		var heapmap;
-		
+
 		function sendMsg() {
 			var data = {
 				"minutes": minutes,
@@ -24,7 +24,7 @@ $(document).ready(function() {
 				console.log("fail");
 			});
 		}
-		
+
 		function update(data) {
 			if (data == "start") {
 				newpoints = {};
@@ -49,7 +49,7 @@ $(document).ready(function() {
 				}
 			}
 		}
-		
+
 		function initialize() {
 			var initPosition = {
 					lat: 0,
@@ -64,7 +64,7 @@ $(document).ready(function() {
 			keyword = "all";
 			sendMsg();
 		}
-		
+
 		function removeMarkers() {
 			for (var key in oldpoints) {
 				if (key in newpoints) {
@@ -74,7 +74,7 @@ $(document).ready(function() {
 			}
 			oldpoints = newpoints;
 		}
-		
+
 		function clearMarkers() {
 			for (var key in oldpoints) {
 				oldpoints[key].setMap(null);
@@ -90,7 +90,7 @@ $(document).ready(function() {
 				infoWindow.open(map, marker);
 			});
 		}
-		
+
 		var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
 
 		var icons = [
@@ -100,7 +100,7 @@ $(document).ready(function() {
 		             iconURLPrefix + 'green-dot.png',
 		             iconURLPrefix + 'blue-dot.png'
 		             ];
-		
+
 		function chooseIcon(pointData) {
 			var key = pointData.keyword;
 			if (key == "food") {
@@ -117,12 +117,12 @@ $(document).ready(function() {
 				return icons[0];
 			}
 		}
-		
+
 		$("#time-select").change(function() {
 			minutes = document.getElementById("time-select").value;
 			sendMsg();
 		});
-		
+
 		$("#category-select").change(function() {
 			keyword = document.getElementById("category-select").value;
 			sendMsg();

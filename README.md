@@ -25,16 +25,26 @@ Siyuan Zhang                   (sz2476)
 3. Each category is marker with different color and an InfoWindow will show up with Twitter content when user click on the marker.
 4. Front-end JavaScript periodically made HTTP Get request to get selected data and update the markers.
 
+##Database
+-----------------
+statusId BIGINT NOT NULL UNIQUE
+userId BIGINT NOT NULL
+screenName varchar(20)
+content varchar(200)
+longitude DOUBLE
+latitude DOUBLE
+createDate datetime
+PRIMARY KEY (statusId)
+
 ##Deployemnt
 -----------------
-1. Create an Ubuntu 64-bit EC2 instance.
-2. Create an application on Elastic Beanstalk.
-3. Upload the war file of the application and deploy it on the EC2 server with load balancing.
+1. Create an Ubuntu 64-bit EC2 instance, Elastic Beanstalk with Tomcat 8 Server, RDS MySQL database, IAM user role and S3 for version storage.
+3. Deploy Java web application to Elastic Beanstalk.
 4. Set up the security group of the RDS instance and EC2 so that the webpage could be visited by public.
 
 ##Use The Source code
 -----------------
-1. Git clone source code
+1. Git clone source code.
 2. Link to AWS account with access key and secret key and connect with current development environment (All usernames and passwords should be written in Credentials.java).
 3. Create application and environment on AWS Elastic Beanstalk with Tomcat 8.
 4. Add Jars to build path and EC2 Tomcat lib file.
