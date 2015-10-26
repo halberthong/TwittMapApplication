@@ -3,7 +3,7 @@ TwittMap
 
 This web application is for showing the current posted twitters on the Google map in near real-time, with user defined settings and category differentiated by colors.
 
-Please see our TwiitMap Application at http://cloudyyyyy-3mamuu3rzh.elasticbeanstalk.com
+
 
 ##Team Member
 -----------------
