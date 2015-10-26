@@ -7,8 +7,8 @@ Please see our TwiitMap Application at http://cloudyyyyy-3mamuu3rzh.elasticbeans
 
 ##Team Member
 -----------------
-Ao Hong                        (ah3209)
-Siyuan Zhang                   (sz2476)
+- Ao Hong                        (ah3209)
+- Siyuan Zhang                   (sz2476)
 
 ##Backend
 -----------------
