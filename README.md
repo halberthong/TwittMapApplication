@@ -41,8 +41,8 @@ Please see our TwiitMap Application at http://cloudyyyyy-3mamuu3rzh.elasticbeans
 ##Deployemnt
 -----------------
 1. Create an Ubuntu 64-bit EC2 instance, Elastic Beanstalk with Tomcat 8 Server, RDS MySQL database, IAM user role and S3 for version storage.
-3. Deploy Java web application to Elastic Beanstalk.
-4. Set up the security group of the RDS instance and EC2 so that the webpage could be visited by public.
+2. Deploy Java web application to Elastic Beanstalk.
+3. Set up the security group of the RDS instance and EC2 so that the webpage could be visited by public.
 
 ##Use The Source code
 -----------------
