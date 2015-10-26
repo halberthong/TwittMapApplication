@@ -27,14 +27,14 @@ Please see our TwiitMap Application at http://cloudyyyyy-3mamuu3rzh.elasticbeans
 
 ##Database
 -----------------
-statusId BIGINT NOT NULL UNIQUE
-userId BIGINT NOT NULL
-screenName varchar(20)
-content varchar(200)
-longitude DOUBLE
-latitude DOUBLE
-createDate datetime
-PRIMARY KEY (statusId)
+* statusId BIGINT NOT NULL UNIQUE
+* userId BIGINT NOT NULL
+* screenName varchar(20)
+* content varchar(200)
+* longitude DOUBLE
+* latitude DOUBLE
+* createDate datetime
+* PRIMARY KEY (statusId)
 
 ##Deployemnt
 -----------------
