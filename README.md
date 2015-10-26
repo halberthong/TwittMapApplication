@@ -27,6 +27,8 @@ Please see our TwiitMap Application at http://cloudyyyyy-3mamuu3rzh.elasticbeans
 
 ##Database
 -----------------
+####MySQL instance on AWS RDS
+
 * statusId BIGINT NOT NULL UNIQUE
 * userId BIGINT NOT NULL
 * screenName varchar(20)
