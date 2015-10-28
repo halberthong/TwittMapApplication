@@ -3,7 +3,7 @@ TwittMap
 
 This web application is for showing the current posted twitters on the Google map in near real-time, with user defined settings and category differentiated by colors.
 
-Please see our TwiitMap Application at http://cloudyyyyy-3mamuu3rzh.elasticbeanstalk.com
+
 
 ##Team Member
 -----------------
@@ -27,20 +27,22 @@ Please see our TwiitMap Application at http://cloudyyyyy-3mamuu3rzh.elasticbeans
 
 ##Database
 -----------------
-statusId BIGINT NOT NULL UNIQUE
-userId BIGINT NOT NULL
-screenName varchar(20)
-content varchar(200)
-longitude DOUBLE
-latitude DOUBLE
-createDate datetime
-PRIMARY KEY (statusId)
+####MySQL instance on AWS RDS
+
+* statusId BIGINT NOT NULL UNIQUE
+* userId BIGINT NOT NULL
+* screenName varchar(20)
+* content varchar(200)
+* longitude DOUBLE
+* latitude DOUBLE
+* createDate datetime
+* PRIMARY KEY (statusId)
 
 ##Deployemnt
 -----------------
 1. Create an Ubuntu 64-bit EC2 instance, Elastic Beanstalk with Tomcat 8 Server, RDS MySQL database, IAM user role and S3 for version storage.
-3. Deploy Java web application to Elastic Beanstalk.
-4. Set up the security group of the RDS instance and EC2 so that the webpage could be visited by public.
+2. Deploy Java web application to Elastic Beanstalk.
+3. Set up the security group of the RDS instance and EC2 so that the webpage could be visited by public.
 
 ##Use The Source code
 -----------------
