@@ -45,10 +45,11 @@ public class WebServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int minutes = -1;
 		String keyword = "all";
-//		Timestamp timestamp = null;
 		try {
-			minutes = Integer.parseInt(request.getParameter("minutes"));
-			keyword = request.getParameter("keyword");			
+			if (request.getParameter("minutes") != null && request.getParameter("keyword") != null) {
+				minutes = Integer.parseInt(request.getParameter("minutes"));
+				keyword = request.getParameter("keyword");
+			}		
 		} catch (Exception e) {
 			Common.writeLog("Incorrect data from front end", e);
 		}
